@@ -74,9 +74,7 @@ $ docker stop コンテナid
 
 # docker imageを作成してdocker containerを作成
 docker imageはDockerfileに書かれた設定を元に作成できる。
-```
-$ git clone https://github.com/ofuji-works/docker-plactice.git
-```
+Dockerfileを開いてください。
 
 
 ---
