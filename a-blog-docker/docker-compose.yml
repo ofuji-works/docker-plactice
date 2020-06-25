@@ -1,0 +1,31 @@
+version: '2'
+# service
+services:
+    # mysql
+    mysql:
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./db/mysql_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+    # proxy
+    proxy:
+        image: jwilder/nginx-proxy:latest
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+        ports:
+            - "80:80"
+    # www
+    www:
+        image: atsu666/ioncube:7.2 # phpのバージョンにあったものを指定
+        privileged: true
+        volumes:
+            - ./www:/var/www/html # host, guest間のファイル同期
+        links:
+            - mysql:mysql
+        environment:
+            - VIRTUAL_HOST=acms.lab,www.acms.lab # host名を指定
+            - APACHE_DOCUMENT_ROOT=/var/www/html # ドキュメントルートを指定
+    # - TZ=`ls -la /etc/localtime | cut -d/ -f8-9`
