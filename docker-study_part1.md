@@ -43,6 +43,11 @@ $ git clone https://github.com/ofuji-works/docker-plactice.git
 ---
 
 # dockerデスクトップのインストール
+```
+https://hub.docker.com/
+```
+1. ユーザー登録
+2. dockerデスクトップのインストール
 
 ---
 
