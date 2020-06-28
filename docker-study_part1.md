@@ -71,7 +71,6 @@ $ git clone https://github.com/ofuji-works/docker-plactice.git
 
 - ローカルで本番と同じ開発環境を作成できる
 
-→ AWSで構築している開発環境の意図は？
 
 - docker imageとして作成した環境を他の人に配れる
 - vpnに繋がなくてもブラウザで確認しながら作業ができる
