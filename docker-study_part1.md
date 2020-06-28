@@ -8,11 +8,31 @@ footer: ''footer text'
 
 # docker勉強会 part1
 
+### 本日の資料
+```
+$ git clone https://github.com/ofuji-works/docker-plactice.git
+```
+
+
+---
+
+# はじめに
+- 複数回に分けて実施したいと思います。
+- 一方的に喋るのではなく、コミュニケーション取りながらやりたい！
+- チームの開発手法の一つとして選択してもらえるようにしたい！
+
+---
+
+# 本日のゴール
+- dockerの概要を掴みましょう
+- docker imageを使ってコンテナが立ち上げる
+- Dockerfileの中身を知る
 
 ---
 
 
 # 目次
+0. dockerデスクトップのインストール
 1. docker概要
 2. docker hub
 3. docker imageからdocker containerを作成
@@ -22,21 +42,39 @@ footer: ''footer text'
 
 ---
 
+# dockerデスクトップのインストール
+
+---
+
 
 # docker概要
-- コンテナ仮想化ツール
-- コンテナという単位で実行環境を作れる
-- VMよりも軽い
+- dockerとは
 - dockerを使うメリット
+- 活用事例
 
 
 ---
 
+
+### dockerとは
+> コンテナ仮想マシンツール
+
+> コンテナという単位で実行環境を作れる
+
+> VMよりも軽い
+
+
+---
+
+
+### メリット
 > 自分のPC(ローカル環境)を汚さずに済む
 
 > aws上で開発しなくても同じ環境で開発ができる
 
 > git, svnで差分ツールを見ながら開発ができる
+
+### デメリット
 
 
 ---
